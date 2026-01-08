@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deadline Buddy</title>
+</head>
+<body>
+
+  <h1>Deadline Buddy</h1>
+  <p>Know when to start, not just when it's due.</p>
+
+  <form>
+    <label>
+      Task Name:
+      <input type="text" placeholder="e.g. Math Project">
+    </label>
+    <br><br>
+
+    <label>
+      Due Date:
+      <input type="date">
+    </label>
+    <br><br>
+
+    <label>
+      Difficulty:
+      <select>
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+      </select>
+    </label>
+    <br><br>
+
+    <button type="button">Add Task</button>
+  </form>
+
+  <hr>
+
+  <h2>Reminder</h2>
+  <p>Start your task early based on its difficulty.</p>
+
+</body>
+</html>
