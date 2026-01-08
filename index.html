@@ -9,36 +9,56 @@
   <h1>Deadline Buddy</h1>
   <p>Know when to start, not just when it's due.</p>
 
-  <form>
-    <label>
-      Task Name:
-      <input type="text" placeholder="e.g. Math Project">
-    </label>
-    <br><br>
+  <label>
+    Task Name:
+    <input type="text" id="taskName" placeholder="e.g. Physics">
+  </label>
+  <br><br>
 
-    <label>
-      Due Date:
-      <input type="date">
-    </label>
-    <br><br>
+  <label>
+    Due Date:
+    <input type="date" id="dueDate">
+  </label>
+  <br><br>
 
-    <label>
-      Difficulty:
-      <select>
-        <option>Easy</option>
-        <option>Medium</option>
-        <option>Hard</option>
-      </select>
-    </label>
-    <br><br>
+  <label>
+    Difficulty:
+    <select id="difficulty">
+      <option>Easy</option>
+      <option>Medium</option>
+      <option>Hard</option>
+    </select>
+  </label>
+  <br><br>
 
-    <button type="button">Add Task</button>
-  </form>
+  <button onclick="addTask()">Add Task</button>
 
   <hr>
 
-  <h2>Reminder</h2>
-  <p>Start your task early based on its difficulty.</p>
+  <h2>Tasks</h2>
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      const name = document.getElementById("taskName").value;
+      const date = document.getElementById("dueDate").value;
+      const difficulty = document.getElementById("difficulty").value;
+
+      if (name === "" || date === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      const li = document.createElement("li");
+      li.textContent = name + " | Due: " + date + " | Difficulty: " + difficulty;
+
+      document.getElementById("taskList").appendChild(li);
+
+      // clear inputs
+      document.getElementById("taskName").value = "";
+      document.getElementById("dueDate").value = "";
+    }
+  </script>
 
 </body>
 </html>
