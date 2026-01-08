@@ -31,7 +31,7 @@
   </label>
   <br><br>
 
-  <button onclick="addTask()">Add Task</button>
+  <button type="button" onclick="addTask()">Add Task</button>
 
   <hr>
 
@@ -54,7 +54,6 @@
 
       document.getElementById("taskList").appendChild(li);
 
-      // clear inputs
       document.getElementById("taskName").value = "";
       document.getElementById("dueDate").value = "";
     }
